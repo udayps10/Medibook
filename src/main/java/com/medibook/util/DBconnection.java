@@ -3,10 +3,10 @@ package com.medibook.util;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class DBconnection {
+public class DBConnection {
 	private static final String URL = "jdbc:mysql://localhost:3306/medibook?allowPublicKeyRetrieval=true&useSSL=false";
 	private static final String USER = "root";
-	private static final String PASSWORD = "your_password_here";
+	private static final String PASSWORD = "Uday@2006";
 
 	public static Connection getConnection() {
 		Connection con = null;
