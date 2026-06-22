@@ -73,7 +73,7 @@ public class AppointmentDAO {
         }
         return false;
     }
-}public boolean isSlotTaken(int doctorId, String date, String timeSlot) {
+public boolean isSlotTaken(int doctorId, String date, String timeSlot) {
 
     String sql = "SELECT * FROM appointments "
                + "WHERE doctor_id = ? "
