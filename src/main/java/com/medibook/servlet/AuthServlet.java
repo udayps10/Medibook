@@ -48,7 +48,13 @@ public class AuthServlet extends HttpServlet {
            if (user != null) {
         	   HttpSession session = req.getSession();
         	   req.getSession().setAttribute("user", user);
-        	   res.sendRedirect("dashboard.jsp");
+        	   if (user.getRole().equals("patient")) {
+        		    res.sendRedirect("patient/dashboard.jsp");
+        		} else if (user.getRole().equals("doctor")) {
+        		    res.sendRedirect("doctor/dashboard.jsp");
+        		} else if (user.getRole().equals("admin")) {
+        		    res.sendRedirect("admin/dashboard.jsp");
+        		}
            }else {
 			   res.sendRedirect("login.jsp?error=invalidCredentials");
            }
